@@ -1,0 +1,11 @@
+.countdown-container {
+    display: flex;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    @include fz-24;
+}

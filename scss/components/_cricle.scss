@@ -1,0 +1,104 @@
+.button {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: flex-end;
+    width: fit-content;
+}
+
+.button:hover .button-text {
+    color: #26948A;
+}
+
+.button:hover .button-circle .circular-chart .circle {
+    animation: CircleProgressAnimation 0.7s ease-out;
+}
+
+.button:hover .button-circle {
+    transform: rotate(540deg);
+}
+
+.button-text {
+    font-weight: 1.4rem;
+    line-height: 1.2;
+    color: #2E3449;
+    font-weight: 700;
+    margin-left: -10px;
+    margin-bottom: -2px;
+    z-index: 1;
+    transition: 0.3s ease;
+}
+
+.button-text.white {
+    color: white;
+}
+
+.button-text.white:hover {
+    color: #2E3449;
+}
+
+@media screen and (max-width: 400px) {
+    .button-text {
+        font-size: 1.4rem;
+    }
+}
+
+.button-circle {
+    transform: rotate(180deg);
+    width: 32px;
+    height: 32px;
+    transition: 0.6s linear;
+}
+
+.button-circle.big {
+    width: 40px;
+    height: 40px;
+}
+
+.button-circle.second .circle-bg {
+    stroke: rgba(0, 0, 0, 0.1);
+}
+
+.button-circle.second .circular-chart .circle {
+    stroke: #2E3449;
+}
+
+.button-circle .circle-bg {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 2;
+    overflow: hidden;
+}
+
+.button-circle .circle {
+    fill: none;
+    stroke-width: 2;
+}
+
+.button-circle .circular-chart .circle {
+    stroke: #26948A;
+    transition: stroke-dasharray 1.2s ease-in-out;
+}
+
+@keyframes CircleProgressAnimation {
+    0% {
+        stroke-dasharray: 50 100;
+    }
+    15% {
+        stroke-dasharray: 72 100;
+    }
+    35% {
+        stroke-dasharray: 0 100;
+    }
+    50% {
+        stroke-dasharray: 35 100;
+    }
+    75% {
+        stroke-dasharray: 45 100;
+    }
+    100% {
+        stroke-dasharray: 50 100;
+    }
+}

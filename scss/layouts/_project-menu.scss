@@ -1,0 +1,150 @@
+.project-page {
+    padding: 112px 0;
+    @include max(1000px) {
+        padding: 24px 0;
+    }
+    &-wrap {}
+    &-box {
+        .box-top {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            @include fz-24;
+        }
+        .box-center {
+            text-align: center;
+            margin: 0 auto;
+            width: 60%;
+            @include max(500px) {
+                width: 100%;
+            }
+            .title {
+                margin-bottom: 28px;
+                @include max(500px) {
+                    margin-top: 40px;
+                }
+            }
+            .des {
+                margin-bottom: 15px;
+            }
+        }
+        .box-bottom {
+            .list-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: -15px;
+                flex-wrap: wrap;
+                @include max(750px) {
+                    margin: -8px;
+                }
+                .item {
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                    overflow: hidden;
+                    padding: 15px;
+                    width: calc(100% / 3);
+                    position: relative;
+                    @include max(750px) {
+                        width: calc(100% / 2);
+                        padding: 8px;
+                    }
+                    @include max(550px) {
+                        width: 100%;
+                    }
+                    .item-inner {}
+                    .title {
+                        @include fz-24;
+                    }
+                    .link {
+                        display: block;
+                        width: 100%;
+                        // position: absolute;
+                        padding-top: calc((260/370) * 100%);
+                        position: relative;
+                    }
+                }
+            }
+            .pagination {
+                margin-top: 15px;
+                &-list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 -8px;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                    .item {
+                        padding: 0 8px;
+                        background-color: rgba(0, 0, 0, .1);
+                        border-radius: 100px;
+                        @include max(750px) {
+                            margin-left: 2%;
+                        }
+                        .link {
+                            display: block;
+                            color: $color-pri;
+                            font-weight: 700;
+                            padding: 8px;
+                        }
+                        &:hover {
+                            background: $color-second;
+                            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+                        }
+                    }
+                    .item-active {
+                        background-color: $color-second;
+                        .link {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post {
+    &-wrap {
+        padding-top: 24px;
+    }
+    &-box {
+        &-top {}
+        &-content {
+            &-inner {
+                .title {
+                    margin-bottom: 24px;
+                    @include max(500px) {
+                        margin-top: 38px;
+                    }
+                }
+                .category {
+                    &-box {
+                        background-color: rgba(38, 148, 138, 0.2);
+                        padding: 24px;
+                        h2 {
+                            font-weight: 700;
+                            @include fz-16;
+                        }
+                    }
+                    &-list {
+                        padding-left: 24px;
+                        li {
+                            color: #000;
+                            list-style: disc;
+                        }
+                    }
+                }
+                .category-heading {
+                    margin-top: 24px;
+                    .text {
+                        color: $color-second;
+                        @include fz-16;
+                        font-weight: 700;
+                        list-style: auto;
+                    }
+                }
+            }
+        }
+    }
+}

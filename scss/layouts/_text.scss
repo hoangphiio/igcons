@@ -1,0 +1,31 @@
+.title {
+    @include fz-32;
+    font-weight: 700;
+    display: inline-block
+}
+
+.des {
+    @include fz-16;
+}
+
+.heading {
+    @include fz-24;
+}
+
+.text-more {
+    margin-left: 4px;
+    font-weight: 700;
+    color: $color-pri;
+}
+
+.text-name {
+    font-weight: 700;
+    opacity: 0.4;
+    @include fz-24;
+}
+
+.sign {
+    font-family: 'Taken';
+    @include fz-112;
+    color: $color-second;
+}

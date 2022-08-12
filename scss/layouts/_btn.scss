@@ -1,0 +1,51 @@
+ .btn{
+   @include flex;
+   align-items: center;
+   background-color: transparent;
+   width: fit-content;
+   cursor: pointer;
+   color: $color-black;
+   .text{
+     @include fz-18;
+     line-height: 1.2;
+     font-weight: 700;
+     transition: 0.3s ease-in-out
+   }
+   .arrow{
+     @include mid-flex;
+     margin-left: 8px;
+     .icon{
+       font-size: 1.8rem;
+       transform: rotate(-45deg);
+       transition: 0.3s ease-in-out;
+     }
+   }
+   &:hover .arrow .icon{
+     transform: rotate(0);
+     color: $color-second;
+   }
+   &:hover .text{
+    color: $color-second;
+  }
+ }
+
+ .btn-download{
+   @include flex;
+   align-items: center;
+   cursor: pointer;
+   .icon{
+     margin-right: 4px;
+   }
+   .text{
+     @include fz-18;
+     line-height: 1.2;
+     color: $color-second;
+     font-weight: 700;
+     transition: 0.3s ease-in-out;
+   }
+   &:hover .icon{
+     animation: DownUp 1s ease infinite;
+   }
+   &:hover .text{
+   }
+ }

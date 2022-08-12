@@ -1,0 +1,430 @@
+.advise-detail {
+    padding: 112px 0;
+    @include max(1000px) {
+        padding: 24px 0;
+    }
+    &-wrap {
+        &-box {
+            .box-top {
+                margin-bottom: 48px;
+                &-img {
+                    width: 100%;
+                    @include max(500px) {
+                        margin-top: 12px;
+                    }
+                    &-inner {
+                        position: relative;
+                        width: 100%;
+                        padding-top: calc((608/1170)*100%);
+                        @include max(450px) {
+                            padding-top: calc((608/1170)*140%);
+                        }
+                    }
+                }
+                .overlay {
+                    z-index: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 0, .4);
+                    display: flex;
+                    align-items: center;
+                }
+                .title-pri {
+                    width: 45%;
+                    margin: 0 auto;
+                    font-weight: 700;
+                    color: #fff;
+                    @include fz-32;
+                    @include max(550px) {
+                        width: 90%;
+                    }
+                    @include max(420px) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .box-content {
+                @include max(500px) {
+                    margin-top: 40px;
+                }
+                &-wrap {
+                    display: flex;
+                    margin: 0 -15px;
+                    @include max(1000px) {
+                        flex-direction: column;
+                    }
+                }
+                &-left {
+                    padding: 0 15px;
+                    width: 65%;
+                    @include max(1000px) {
+                        width: 100%;
+                    }
+                    &-inner {
+                        text-align: justify;
+                        margin-bottom: 32px;
+                        .title {
+                            text-align: justify;
+                            @include fz-24;
+                        }
+                        .bold {
+                            font-weight: 700;
+                            @include fz-16;
+                        }
+                        p {
+                            @include fz-16;
+                        }
+                    }
+                    &-bottom {
+                        margin-bottom: 32px;
+                        .box-bottom {
+                            &-inner {
+                                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                                padding: 30px 0;
+                                &-control {
+                                    align-items: center;
+                                    display: flex;
+                                    gap: 28px;
+                                    @include max(450px) {
+                                        display: unset;
+                                    }
+                                    .swiper {
+                                        flex: 1;
+                                    }
+                                }
+                                .box-img {
+                                    cursor: pointer;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 20px;
+                                    height: 20px;
+                                    padding: 20px;
+                                    border-radius: 50%;
+                                    background-color: rgba(0, 0, 0, .1);
+                                    img {
+                                        width: 8px;
+                                        height: 16px;
+                                    }
+                                }
+                                .box-img.btn-active {
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    background-color: $color-second;
+                                }
+                                .bold {
+                                    max-width: 230px;
+                                    font-weight: 700;
+                                    padding: 0 12px;
+                                    @include fz-16;
+                                    @include max(600px) {
+                                        max-width: unset;
+                                        padding: 12px 0;
+                                    }
+                                    a {
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3; // số dòng muốn hiển thị
+                                        -webkit-box-orient: vertical;
+                                        text-overflow: ellipse;
+                                        overflow: hidden;
+                                        color: $color-pri;
+                                    }
+                                    @include max(1000px) {
+                                        max-width: unset;
+                                        &:nth-child(1) {
+                                            color: $color-second;
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        margin-left: auto;
+                                    }
+                                }
+                                &-text {
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    @include max(600px) {
+                                        align-items: unset;
+                                        flex-direction: column;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &-list {
+                        .box-content-list {
+                            margin-top: 38px;
+                        }
+                        .box-content {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                            &-inner {
+                                align-items: center;
+                                margin-bottom: 24px;
+                                display: flex;
+                                gap: 30px;
+                                @include max(450px) {
+                                    flex-direction: column;
+                                }
+                                .box-img {
+                                    position: relative;
+                                    width: 200px;
+                                    height: 200px;
+                                    @include max(450px) {
+                                        width: 100%;
+                                        height: unset;
+                                        padding-top: 70%;
+                                    }
+                                    img {
+                                        object-fit: contain;
+                                        @include max(450px) {
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+                                .box-text {
+                                    width: 70%;
+                                    @include max(450px) {
+                                        width: 100%;
+                                    }
+                                    .title {
+                                        @include fz-24;
+                                        a {
+                                            color: initial;
+                                            &:hover {
+                                                color: $color-second;
+                                                transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+                                            }
+                                        }
+                                        @include max(600px) {
+                                            display: -webkit-box;
+                                            -webkit-line-clamp: 2; // số dòng muốn hiển thị
+                                            -webkit-box-orient: vertical;
+                                            text-overflow: ellipse;
+                                            overflow: hidden;
+                                        }
+                                    }
+                                }
+                                .des {
+                                    @include fz-16;
+                                    @include max(600px) {
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3; // số dòng muốn hiển thị
+                                        -webkit-box-orient: vertical;
+                                        text-overflow: ellipse;
+                                        overflow: hidden;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-right {
+                    padding: 0 15px;
+                    width: 35%;
+                    @include max(1000px) {
+                        width: 100%;
+                    }
+                    &-inner {
+                        &-top {
+                            margin-bottom: 56px;
+                            @include max(750px) {
+                                box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+                            }
+                        }
+                        .advise-detail-box-center-inner {
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-image: url(../../assets/images/bg-advise-senmail.jpg);
+                            .des {
+                                padding: 16px 0px 97px;
+                                margin: 0 auto;
+                                text-align: center;
+                                color: $color-pri;
+                            }
+                        }
+                        .box-title {
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .title {
+                            color: initial;
+                        }
+                        .sign {
+                            @include fz-72;
+                        }
+                        .box-input {
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            &-w {
+                                margin: 0 auto;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                max-width: 330px;
+                                gap: 11px;
+                                @include max(750px) {
+                                    max-width: unset;
+                                }
+                                .input-inner {
+                                    height: 48px;
+                                    background: #FFFFFF;
+                                    border-radius: 6px;
+                                    align-items: center;
+                                    display: flex;
+                                    width: 90%;
+                                    @include max(750px) {
+                                        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+                                    }
+                                    label {
+                                        padding-left: 12px;
+                                    }
+                                    .input {
+                                        width: 100%;
+                                        outline: none;
+                                        border: none;
+                                        height: 40px;
+                                        margin: 12px 16px;
+                                    }
+                                }
+                            }
+                        }
+                        .sendmail-box-bottom {
+                            margin-top: 32px;
+                            position: relative;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 3px;
+                                background: #26948A;
+                            }
+                            &-inner {
+                                width: fit-content;
+                                margin: 0 auto;
+                                position: relative;
+                                padding: 8px 16px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                z-index: 1;
+                                &::before {
+                                    z-index: -1;
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background-color: #26948A;
+                                    transform: perspective(10px) rotateX(1deg) translateY(-1px);
+                                    border-radius: 26px 26px 0 0;
+                                }
+                                .curved {
+                                    display: block;
+                                    position: absolute;
+                                    width: 20px;
+                                    height: 20px;
+                                    overflow: hidden;
+                                    z-index: 1;
+                                    transform: perspective(0px) rotateX(0deg)
+                                }
+                                .curved-left {
+                                    left: -20px;
+                                    bottom: 0px;
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 250%;
+                                        height: 250%;
+                                        border-radius: 50%;
+                                        right: 0;
+                                        bottom: 0;
+                                        box-shadow: 30px 30px 0 0 #26948a;
+                                    }
+                                }
+                            }
+                            .curved-right {
+                                right: -20px;
+                                bottom: 0px;
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 250%;
+                                    height: 250%;
+                                    border-radius: 50%;
+                                    bottom: 0;
+                                    left: 0;
+                                    box-shadow: -30px 30px 0 0 #26948a;
+                                }
+                            }
+                            img {
+                                width: 24px;
+                                height: 24px;
+                            }
+                            a {
+                                margin-left: 10px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .box-top {
+                        margin-top: 56px;
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        margin-bottom: 32px;
+                        .line {
+                            width: 70px;
+                            border: 1px solid rgba(0, 0, 0, .4);
+                        }
+                        .text-name {
+                            @include fz-24;
+                        }
+                    }
+                    .box-content {
+                        &-inner {
+                            display: flex;
+                            margin-bottom: 16px;
+                            gap: 16px;
+                            .box-img {
+                                position: relative;
+                                width: 100px;
+                                height: 100px;
+                                img {
+                                    object-fit: contain
+                                }
+                            }
+                            .box-text {
+                                width: 70%;
+                                .title {
+                                    @include fz-16;
+                                    a {
+                                        color: initial;
+                                        &:hover {
+                                            color: $color-second;
+                                            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+                                        }
+                                    }
+                                }
+                                .des {
+                                    @include fz-14;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

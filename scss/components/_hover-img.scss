@@ -1,0 +1,65 @@
+#image_01 {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#image_01:hover #image_01_hover03 {
+    opacity: 0.2;
+}
+
+#image_01:hover #image_01_hover {
+    opacity: 1.0;
+    top: 30%;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#image_01:hover #image_01_hover02 {
+    top: 50%;
+    right: 0;
+    opacity: 1.0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#image_01_hover {
+    position: absolute;
+    top: 30%;
+    left: -100%;
+    margin: auto;
+    opacity: 0.0;
+    transition: all 0.5s ease;
+    color: $color-second;
+    text-align: center;
+    font-family: 'Taken';
+    @include fz-80;
+}
+
+#image_01_hover02 {
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    margin: auto;
+    opacity: 0.0;
+    transition: all 0.5s ease;
+    color: #fff;
+    text-align: center;
+}
+
+#image_01_hover03 {
+    background-color: #fff;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0.0;
+}

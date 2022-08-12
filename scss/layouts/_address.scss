@@ -1,0 +1,111 @@
+.address {
+    background: #F8F8F8;
+    padding: 112px 0;
+    @include max(1000px) {
+        padding: 24px 0;
+    }
+    &-wrap {
+        margin: 0 -15px;
+    }
+    &-box {
+        &-top {
+            display: flex;
+            @include max(800px) {
+                flex-direction: column;
+            }
+            .box-left {
+                padding: 0 15px;
+                width: 30%;
+                @include max(800px) {
+                    width: 100%;
+                }
+                &-inner {
+                    .inner-top {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        .line {
+                            width: 70px;
+                            border: 1px solid rgba(0, 0, 0, .4);
+                        }
+                        .text-name {
+                            @include fz-24;
+                        }
+                    }
+                    .title {
+                        padding-top: 48px;
+                        span {
+                            color: $color-second;
+                        }
+                    }
+                    .des {
+                        padding: 24px 0;
+                        opacity: .6;
+                    }
+                    .mxh {
+                        span {
+                            font-weight: 600;
+                            @include fz-16;
+                            color: #fff;
+                        }
+                        &-icon {
+                            gap: 8px;
+                            display: flex;
+                            a {
+                                img {
+                                    width: 32px;
+                                    height: 32px;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .box-right {
+                margin-left: auto;
+                padding: 0 15px;
+                width: 70%;
+                @include max(800px) {
+                    width: 100%;
+                }
+                &-inner {
+                    justify-content: end;
+                    display: flex;
+                    width: 100%;
+                    gap: 30px;
+                    @include max(800px) {
+                        padding-top: 16px;
+                        justify-content: center;
+                    }
+                    @include max(500px) {
+                        flex-direction: column;
+                    }
+                    .box-content {
+                        display: flex;
+                        flex-direction: column;
+                        .box-img {
+                            position: relative;
+                            width: 100%;
+                            padding-top: 65%;
+                        }
+                        .box-info {
+                            .title {
+                                padding-top: 24px;
+                                @include fz-16;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map {
+    text-align: center;
+    overflow: hidden;
+    iframe {
+        width: -webkit-fill-available;
+    }
+}

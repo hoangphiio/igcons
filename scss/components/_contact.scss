@@ -1,0 +1,168 @@
+.project-contact {
+    overflow: hidden;
+    background-image: url(../../assets/images/bg-contact-project.jpg);
+    background-position-x: right;
+    background-repeat: no-repeat;
+    padding: 112px 0;
+    position: relative;
+    @include max(1000px) {
+        padding: 24px 0;
+    }
+    &-wrap {}
+    &-top {
+        display: flex;
+        align-items: center;
+    }
+    &-center {
+        &-inner {
+            width: 66%;
+            @include max(750px) {
+                width: 100%;
+            }
+            .title {
+                margin-bottom: 30px;
+            }
+            .box-input {
+                background: #F8F8F8;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 6px;
+                height: 48px;
+                margin-bottom: 16px;
+                .input {
+                    border: none;
+                    outline: none;
+                    background: initial;
+                    width: 100%;
+                    padding: 16px;
+                    &:focus {}
+                }
+            }
+        }
+        .box-input-textarea {
+            background: #F8F8F8;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            textarea {
+                background: #F8F8F8;
+                border-radius: 6px;
+                height: fit-content;
+                width: 100%;
+                border: none;
+                padding: 12px;
+                outline: none;
+                font-family: 'SF Pro Display';
+                @include fz-16;
+            }
+        }
+        .box-input-wrap {
+            display: flex;
+            gap: 16px;
+            @include max(500px) {
+                flex-direction: column;
+            }
+            .box-input-email {
+                width: 50%;
+                background: #F8F8F8;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 6px;
+                height: fit-content;
+                margin-bottom: 16px;
+                @include max(500px) {
+                    width: 100%;
+                    margin-bottom: unset;
+                }
+            }
+            .box-input-phone {
+                display: flex;
+                align-items: center;
+                width: 50%;
+                background: #F8F8F8;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 6px;
+                height: fit-content;
+                margin-bottom: 16px;
+                @include max(500px) {
+                    width: 100%;
+                }
+                label {
+                    margin-left: 16px;
+                }
+            }
+            .input {
+                border: none;
+                outline: none;
+                background: initial;
+                width: 100%;
+                padding: 16px;
+            }
+        }
+        .submit {
+            margin-top: 16px;
+            border-radius: 6px;
+            display: inline-block;
+            background-color: $color-second;
+            &-box {
+                padding: 12px 16px;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+                .link-submit {
+                    font-weight: 700;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .polygon-contact-1 {
+        position: absolute;
+        bottom: 57%;
+        right: 0;
+        @include max(1200px) {
+            display: none;
+        }
+    }
+    .polygon-contact-2 {
+        position: absolute;
+        top: 15%;
+        left: 60%;
+        @include max(1200px) {
+            display: none;
+        }
+    }
+    .polygon-contact-3 {
+        position: absolute;
+        bottom: 13%;
+        right: 14%;
+        @include max(1200px) {
+            display: none;
+        }
+    }
+    .polygon-contact-4 {
+        position: absolute;
+        bottom: 35%;
+        right: 32%;
+        @include max(1200px) {
+            display: none;
+        }
+    }
+    .polygon-contact-5 {
+        position: absolute;
+        bottom: 38%;
+        left: 14%;
+        @include max(1200px) {
+            display: none;
+        }
+    }
+    .polygon-contact-6 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include max(1200px) {
+            display: none;
+        }
+    }
+}

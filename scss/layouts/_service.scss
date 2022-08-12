@@ -1,0 +1,144 @@
+.service {
+    background-image: url(../../assets/images/bg-service.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: left;
+    padding-top: 112px;
+    @include max(1000px) {
+        padding-top: 24px;
+    }
+    &-wrap {}
+    &-box {
+        margin: 0 -55px;
+        display: flex;
+        @include max(1000px) {
+            margin: 0 -15px;
+        }
+        @include max(500px) {
+            flex-direction: column;
+        }
+        .box-left {
+            padding: 0 55px;
+            width: 50%;
+            @include max(1000px) {
+                padding: 0 15px;
+            }
+            @include max(500px) {
+                width: 100%;
+            }
+        }
+    }
+    .box-content {
+        .content {
+            padding-bottom: 32px;
+            @include max(500px) {
+                padding-bottom: unset;
+                margin-bottom: 8px;
+            }
+        }
+        .text-title {
+            .title {}
+        }
+        .des {
+            margin: 35px 0;
+        }
+        .list {
+            margin-top: 70px;
+            @include max(1000px) {
+                margin-top: 12px;
+            }
+        }
+        .item {
+            width: 100%;
+        }
+        .box-img {
+            transition: all 0.4s;
+            filter: drop-shadow(20px 20px 60px rgba(0, 0, 0, 0.16));
+            position: relative;
+            padding-top: 100%;
+            .title {}
+        }
+        .box-content {
+            margin-top: 24px;
+        }
+        .text-title {
+            .title {
+                @include fz-24;
+            }
+        }
+        .des {
+            margin: 8px 0 30px 0;
+            @include max(1000px) {
+                max-width: unset;
+                margin: 8px 0;
+            }
+        }
+    }
+    .sale {
+        padding-top: 17px;
+        display: inline-block;
+        margin-top: 32px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .box-sale {}
+    .sale-title {
+        p {
+            font-weight: 700;
+            @include fz-16;
+        }
+        .title {}
+    }
+    .box-time {
+        margin-top: 8px;
+        font-weight: 700;
+        @include fz-24;
+    }
+    .space {
+        padding: 0 7px;
+    }
+    .sec {
+        background: rgba(38, 148, 138, 0.1);
+        border-radius: 6px;
+        color: $color-second;
+    }
+    .box-right {
+        padding: 0 55px;
+        width: 50%;
+        @include max(1000px) {
+            padding: 0 15px;
+        }
+        @include max(500px) {
+            width: 100%;
+        }
+        .list {}
+        .item {
+            margin-bottom: 64px;
+            width: 100%;
+            @include max(1000px) {
+                margin-bottom: 12px;
+            }
+        }
+        .box-img {
+            filter: drop-shadow(20px 20px 60px rgba(0, 0, 0, 0.16));
+            position: relative;
+            padding-top: 100%;
+        }
+        .box-content {
+            margin-top: 24px;
+        }
+        .text-title {
+            .title {
+                @include fz-24;
+            }
+        }
+        .des {
+            max-width: 300px;
+            margin: 8px 0 30px 0;
+            @include max(1000px) {
+                max-width: unset;
+                margin: 8px 0;
+            }
+        }
+    }
+}

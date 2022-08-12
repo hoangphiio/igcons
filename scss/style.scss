@@ -1,0 +1,46 @@
+// Library
+@import url("../js/library/fontawesome/css/all.css");
+@import url("../js/library/aos/aos.css");
+@import url("../js/library/swiper/swiper-bundle.min.css");
+@import url("../js/library/hover/hover.min.css");
+// @import url("../js/library/themify-icons/themify-icons.css");
+// @import url("../js/library/select2/select2.min.css");
+// @import url("../js/library/wow/animate.min.css");
+// @import url("../js/library/magnific/magnific-popup.css");
+// @import url("../js/library/gallery/lightgallery.min.css");
+// Core
+@import "./core/reset";
+@import "./core/variable";
+@import "./core/font";
+@import "./core/mixin";
+@import "./core/base";
+@import "./core/flex";
+@import "./core/animation";
+@import "./core/magnific";
+// Component
+@import "./components/heading-line";
+@import "./components/hover-img";
+@import "./components/count-down";
+@import './components/hover-text';
+@import "./components/wallpaper";
+@import "./components/build-banner";
+@import "./components/cricle";
+@import "./components/contact";
+@import "./components/footer";
+// Layout
+@import "./layouts/design";
+@import "./layouts/aboutpage";
+@import "./layouts/address";
+@import "./layouts/advise-detail";
+@import "./layouts/advise";
+@import "./layouts/project-menu";
+@import "./layouts/news";
+@import"./layouts/feedback";
+@import "./layouts/service";
+@import "./layouts/sendmail";
+@import "./layouts/text";
+@import "./layouts/project";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/banner";
+@import "./layouts/reason";
